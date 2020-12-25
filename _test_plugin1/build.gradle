@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+sourceSets.main.java.srcDir 'src'
+sourceSets.main.resources.srcDir 'resources'
+
+dependencies {
+    compile rootProject
+    compile project(':_test_plugin')
+}
+
+task afterBuild {
+    doLast {
+        copy {
+            from new File(buildDir, 'libs')
+            into rootProject.file('plugins')
+            include '*.jar'
+        }
+    }
+}
+build.finalizedBy afterBuild

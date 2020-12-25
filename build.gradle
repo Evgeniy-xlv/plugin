@@ -1,0 +1,9 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.xlv.plugin'
+version '0.1'
+
+sourceSets.main.java.srcDir 'src'
+sourceSets.test.java.srcDir 'test'

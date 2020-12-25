@@ -1,0 +1,6 @@
+rootProject.name = 'plugmanager'
+
+include(
+        '_test_plugin',
+        '_test_plugin1',
+)
